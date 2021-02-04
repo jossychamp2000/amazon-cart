@@ -1,14 +1,14 @@
 import React from 'react'
 import './Header.css'
 
-function Header() {
+function Header({ title }) {
     return (
-        <div className="App">
-            <div className="App-header">
-                <h1>Amazon Cart</h1>
-            </div>
 
+        <div className="App-header">
+            <h1>{title}</h1>
         </div>
+
+
     )
 }
 
