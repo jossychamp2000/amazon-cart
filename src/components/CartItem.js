@@ -3,6 +3,7 @@ import './CartItem.css'
 
 
 function CartItem() {
+
     return (
         <div className="CartItem">
             <div className="CartItem-image">
