@@ -10,7 +10,13 @@ function CartItems({ items, setCartItems }) {
         items[index].quantity = e.target.value
         setCartItems(newItems);
 
+    }
 
+    const deleteItem = (indexToDelete) => {
+        const newItems = items.filter((value, index) => {
+            return index !== indexToDelete
+        })
+        setCartItems(newItems)
     }
 
     return (
@@ -25,6 +31,7 @@ function CartItems({ items, setCartItems }) {
                         item={item}
                         key={index}
                         changeItemQuantity={changeItemQuantity}
+                        deleteItem={deleteItem}
                     />
                 )}
 
